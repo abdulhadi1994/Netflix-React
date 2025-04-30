@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavLogo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDown,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faFilm, faGear, faHouse, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,16 +16,15 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-left">
           <img src={NavLogo} href="/" className="nav__logo" />
-
           <ul className="nav__menu-links">
-            {["Home", "TV Shows", "Movies", "Membership", "Settings"]
-            .map((item) => (<li key={item} className="nav__menu-link">{item}</li>)
-            )}
+            <li className="nav__menu-link"><span><FontAwesomeIcon icon={faHouse}/></span> Home </li>
+            <li className="nav__menu-link"><span><FontAwesomeIcon icon={faFilm} /></span>Movies/TV Series </li>
+            <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faUser} /></span>Membership </li>
+            <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faGear} /></span>Settings  </li>
           </ul>
         </div>
 
         <div className="navbar-right">
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="nav__search" />
           <div className="nav__profile">
             <button className="circle">
               <span className="circle__inital">A</span>

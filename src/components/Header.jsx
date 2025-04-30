@@ -1,29 +1,36 @@
 import React from "react";
 import Hero from "../assets/background-img.jpg";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <>
-      <header className="hero">
+      <section className="hero">
 
         <img src={Hero} alt="" className="header__img" />
         <div className="container">
-        <div className="header__contents">
-          <h1 className="header__title">Title</h1>
-          <div className="header__btns">
-            <button className="header__btn-1">Play</button>
-            <button className="header__btn-2"><span className="header__btn-icon"><FontAwesomeIcon icon={faCircleInfo}/></span>More Info</button>
+        <div className="home-text">
+            <h1 className="home-text__heading">
+              Unlimited films, TV programmes and more
+            </h1>
+            <h3 className="home-text__subheading">
+              Ready to watch? Search for a movie.
+            </h3>
+            <div className="home__background-search">
+              <div className="home__input--wrapper">
+                <input
+                  type="text"
+                  className="home__input"
+                  id="searchBar"
+                  placeholder="Find a movie"
+                />
+                <FontAwesomeIcon icon={faMagnifyingGlass} className="movie__search"/>
+              </div>
+            </div>
           </div>
-          <p className="header__description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus at
-            velit dolorum praesentium iusto non perferendis molestias, et
-            pariatur aspernatur..
-          </p>
         </div>
-        </div>
-      </header>
+      </section>
     </>
   );
 };
