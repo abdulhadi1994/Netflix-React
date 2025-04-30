@@ -19,10 +19,10 @@ const Navbar = () => {
           <img src={NavLogo} href="/" className="nav__logo" />
           <ul className="nav__menu-links">
             <li className="nav__menu-link"><span><FontAwesomeIcon icon={faHouse}/></span> Home </li>
-            <Link to="/moviepage">
-           <li className="nav__menu-link"><span><FontAwesomeIcon icon={faFilm} /></span>Movies/TV Series</li>
+            <Link to="/moviepage" className="nav__menu-link">
+           <li ><span><FontAwesomeIcon icon={faFilm} /></span>Movies/TV Series</li>
             </Link>            
-<li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faUser} /></span>Membership </li>
+            <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faUser} /></span>Membership </li>
             <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faGear} /></span>Settings  </li>
           </ul>
         </div>

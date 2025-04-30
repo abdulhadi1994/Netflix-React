@@ -150,12 +150,14 @@ button {
 .nav__menu-links {
   display: flex;
   gap: 50px;
+  
 }
 
 .nav__menu-link {
   cursor: pointer;
   list-style: none;
   text-decoration: none;
+  color: inherit;
 }
 
 .nav__menu-link span {
@@ -572,3 +574,4 @@ button {
   font-size: 30px;
   font-weight: 500;
 }
+
