@@ -150,11 +150,12 @@ button {
 .nav__menu-links {
   display: flex;
   gap: 50px;
-  list-style: none;
 }
 
 .nav__menu-link {
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
 .nav__menu-link span {

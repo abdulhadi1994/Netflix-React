@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavLogo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faFilm, faGear, faHouse, faUser } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,8 +19,10 @@ const Navbar = () => {
           <img src={NavLogo} href="/" className="nav__logo" />
           <ul className="nav__menu-links">
             <li className="nav__menu-link"><span><FontAwesomeIcon icon={faHouse}/></span> Home </li>
-            <li className="nav__menu-link"><span><FontAwesomeIcon icon={faFilm} /></span>Movies/TV Series </li>
-            <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faUser} /></span>Membership </li>
+            <Link to="/moviepage">
+           <li className="nav__menu-link"><span><FontAwesomeIcon icon={faFilm} /></span>Movies/TV Series</li>
+            </Link>            
+<li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faUser} /></span>Membership </li>
             <li className="nav__menu-link no-cursor"><span><FontAwesomeIcon icon={faGear} /></span>Settings  </li>
           </ul>
         </div>
