@@ -5,8 +5,10 @@ import Trending from "../components/Trending";
 const HomePage = () => {
   return (
     <>
+    <div className="homepage">
       <Header />
       <Trending />
+    </div>
     </>
   );
 };
